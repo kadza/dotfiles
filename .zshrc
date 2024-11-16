@@ -128,3 +128,5 @@ setopt APPEND_HISTORY              # Append commands to history, don’t overwri
 setopt INC_APPEND_HISTORY          # Write to history immediately
 setopt HIST_IGNORE_DUPS            # Avoid duplicate entries
 setopt HIST_REDUCE_BLANKS          # Remove unnecessary blanks
+
+source ~/.env_variables
