@@ -88,6 +88,9 @@ else
   export EDITOR='nvim'
 fi
 
+# vim motions in terminal
+set -o vi
+
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
