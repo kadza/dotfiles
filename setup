@@ -1,14 +1,17 @@
 #!/bin/bash
 export CONFIG_HOME="$HOME"/.config
 mkdir -p "$CONFIG_HOME"
-mkdir -p "$CONFIG_HOME"/nixpkgs
+mkdir -p "$CONFIG_HOME"/ghostty
+mkdir -p "$CONFIG_HOME"/aerospace
+# mkdir -p "$CONFIG_HOME"/nixpkgs
 
 ln -sf "$PWD/nvim" "$CONFIG_HOME"/nvim
-ln -sf "$PWD/config.nix" "$CONFIG_HOME"/nixpkgs/config.nix
+ln -sf "$PWD/ghostty/ghostty.config" "$CONFIG_HOME"/ghostty/config
+ln -sf "$PWD/aerospace/aerospace.toml" "$CONFIG_HOME"/aerospace/aerospace.toml
+# ln -sf "$PWD/config.nix" "$CONFIG_HOME"/nixpkgs/config.nix
 
-nix-env -iA nixpkgs.myPackages
-
-git submodule update --init --recursive
+# nix-env -iA nixpkgs.myPackages
+# git submodule update --init --recursive
 
 alias v="nvim"
 alias vim="nvim"
