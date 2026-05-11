@@ -1,0 +1,6 @@
+{
+  "name": "dotfiles",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "runArgs": ["--name", "dotfiles"]
+}
