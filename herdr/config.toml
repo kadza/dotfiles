@@ -1,0 +1,31 @@
+onboarding = false
+
+[ui.toast]
+delivery = "system"
+
+[keys]
+prefix = "ctrl+f"
+
+[[keys.command]]
+key = "prefix+h"
+type = "plugin_action"
+command = "local.goto-tab.tab-1"
+description = "go to tab 1"
+
+[[keys.command]]
+key = "prefix+j"
+type = "plugin_action"
+command = "local.goto-tab.tab-2"
+description = "go to tab 2"
+
+[[keys.command]]
+key = "prefix+k"
+type = "plugin_action"
+command = "local.goto-tab.tab-3"
+description = "go to tab 3"
+
+[[keys.command]]
+key = "prefix+l"
+type = "plugin_action"
+command = "local.goto-tab.tab-4"
+description = "go to tab 4"

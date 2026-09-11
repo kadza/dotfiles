@@ -1,0 +1,30 @@
+id = "local.goto-tab"
+name = "Goto Tab"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Jump to a tab by position (1-4) using hjkl, since switch_tab only accepts digit keys."
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "tab-1"
+title = "Go to tab 1"
+contexts = ["pane", "workspace"]
+command = ["sh", "scripts/goto-tab.sh", "1"]
+
+[[actions]]
+id = "tab-2"
+title = "Go to tab 2"
+contexts = ["pane", "workspace"]
+command = ["sh", "scripts/goto-tab.sh", "2"]
+
+[[actions]]
+id = "tab-3"
+title = "Go to tab 3"
+contexts = ["pane", "workspace"]
+command = ["sh", "scripts/goto-tab.sh", "3"]
+
+[[actions]]
+id = "tab-4"
+title = "Go to tab 4"
+contexts = ["pane", "workspace"]
+command = ["sh", "scripts/goto-tab.sh", "4"]
