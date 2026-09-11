@@ -6,26 +6,45 @@ delivery = "system"
 [keys]
 prefix = "ctrl+f"
 
+switch_tab = "prefix+shift+1..9"
+
+focus_agent = "prefix+1..9"
+
 [[keys.command]]
-key = "prefix+h"
+key = "prefix+j"
 type = "plugin_action"
 command = "local.goto-tab.tab-1"
 description = "go to tab 1"
 
 [[keys.command]]
-key = "prefix+j"
+key = "prefix+k"
 type = "plugin_action"
 command = "local.goto-tab.tab-2"
 description = "go to tab 2"
 
 [[keys.command]]
-key = "prefix+k"
+key = "prefix+l"
 type = "plugin_action"
 command = "local.goto-tab.tab-3"
 description = "go to tab 3"
 
 [[keys.command]]
-key = "prefix+l"
+key = "prefix+;"
 type = "plugin_action"
 command = "local.goto-tab.tab-4"
 description = "go to tab 4"
+
+[theme]
+name = "terminal"
+
+[theme.custom]
+panel_bg = "#1e1e1e" 
+sidebar_bg = "#252526" 
+active_row_bg = "#2a2d2e" 
+accent = "#007acc" 
+
+[ui]
+tab_bar_position = "bottom"
+tab_bar_right = [
+    { type = "datetime", format = "%H:%M" }
+]
