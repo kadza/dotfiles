@@ -144,3 +144,26 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Track command start time and name
+preexec() {
+_cmd_start=$SECONDS
+_cmd_name=$1
+}
+
+precmd() {
+if [[ -n $_cmd_start ]]; then
+  local duration=$(( SECONDS - _cmd_start ))
+  # Only notify for commands that took longer than 5 seconds
+  if (( duration >= 5 )); then
+    local title="Done: $_cmd_name"
+    local body="Took ${duration}s"
+    if [[ -n $TMUX ]]; then
+      printf "\033Ptmux;\033\033]777;notify;%s;%s\007\033\\" "$title" "$body"
+    else
+      printf "\033]777;notify;%s;%s\007" "$title" "$body"
+    fi
+  fi
+  unset _cmd_start _cmd_name
+fi
+}
